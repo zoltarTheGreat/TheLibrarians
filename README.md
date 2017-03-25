@@ -14,23 +14,23 @@ The system currently in use at the university requires a staff of people around 
 This section provides a functional overview of the system. This will be divided into two parts.
 
 ### 3.2 Functional Requirements
-* [The student can check out available books for a week period.
-* [The student can  reserve unavailable books. 
-* [The student can search the inventory and filter results using the title, genre, year published, author name and availability.
-* [The system uses three levels of access; guest, student and admin.
-* [The admin has the capability to add new books.
-* [The admin has the capability to remove books. 
-* [The admin maintains a registry containing the names of those who have books checked out even after the removal of a book.
-* [A book that is a week overdue will be fined of $210.
-* [The admin has the capability to remove a user from the system.
-* [The system will display full inventory of available books before searching.
+- The student can check out available books for a week period.
+- The student can  reserve unavailable books. 
+- The student can search the inventory and filter results using the title, genre, year published, author name and availability.
+- The system uses three levels of access; guest, student and admin.
+- The admin has the capability to add new books.
+- The admin has the capability to remove books. 
+- The admin maintains a registry containing the names of those who have books checked out even after the removal of a book.
+- A book that is a week overdue will be fined of $210.
+- The admin has the capability to remove a user from the system.
+- The system will display full inventory of available books before searching.
 
 ### 3.3 Non Functional Requirements
 
 #### 3.3.1 Usability
-* [Any user who has basic computer literacy will be able to navigate the system without instructions.
-* [The system will provide visual cues to guide all users.
-* [Any users with english proficiency will be able to understand the system.
+- Any user who has basic computer literacy will be able to navigate the system without instructions.
+- The system will provide visual cues to guide all users.
+- Any users with english proficiency will be able to understand the system.
 
 #### 3.3.2 Reliability
 The team will test proportions of the code to ensure that they function well.
@@ -45,7 +45,7 @@ The system does not accept patches as it is not in the time frame of the team at
 The system will be implemented by Apache and MySql.
 
 ### 3.4 Constraints
-* [Must be web based.
-* [Must have a database.
-* [Must have front and back end to web page.
-* [Must have a minimum three users.
+- Must be web based.
+- Must have a database.
+- Must have front and back end to web page.
+- Must have a minimum three users.
