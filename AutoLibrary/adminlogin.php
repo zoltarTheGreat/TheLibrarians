@@ -30,10 +30,12 @@ $inpdnomsg = '';
      
 _HTML_;
  
-  require ('./dbConfig.php');
+  require ('dbConfig.php');
   $querystring = "SELECT * FROM `admin`  WHERE userid ='$inpuserid' and pass='$inppass'";
   $result = mysqli_query($con, $querystring);
-  $count = mysqli_num_rows($result);
+  if (!$result){
+    $count = mysqli_num_rows($result);
+  }
   
   
   if($count == 1) {
