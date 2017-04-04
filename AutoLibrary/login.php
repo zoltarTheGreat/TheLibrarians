@@ -106,17 +106,18 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li class="active "><a href="indox.html">Home</a></li>
+          <li><a href="indox.html">Home</a></li>
           <li><a href="searchBook/index.html ">Search</a></li>
           <li><a href="payment/index.html ">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
-          <li><a href="login/index.html "><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
+          <li class="active"><a href="login/index.html "><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
           <li><a href="register/index.html">Register</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <div class="center ">
     <div class="row content ">
@@ -160,7 +161,7 @@ $inpdnomsg = '';
 
 _HTML_;
  
-  require ('../dbConfig.php');
+  require ('dbConfig.php');
   $querystring = "SELECT * FROM `student`  WHERE userid ='$inpuserid' and pass='$inppass'";
   $result = mysqli_query($con, $querystring);
   $count = mysqli_num_rows($result);
