@@ -1,0 +1,68 @@
+    .navbar-brand {
+      height: 80px;
+      padding: 0px;
+    }
+
+    .nav>li>a {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .navbar-toggle {
+      padding: 10px;
+      margin: 25px 15px 25px 0;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    .navbar-brand>img {
+      height: 100%;
+      padding: 0px;
+      width: auto;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+    .row.content {
+      height: 450px
+    }
+    /* Set gray background color and 100% height */
+
+    .sidenav {
+      padding-top: 20px;
+      background-color: ivory;
+      height: 100%;
+    }
+
+    .center {
+      background: url('books.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    /* Set black background color, white text and some padding */
+
+    footer {
+      background-color: #8C001A;
+      color: ivory;
+      padding: 15px;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {
+        height: auto;
+      }
+    }
+
+    div>p{
+      color: black;
+    }
+  

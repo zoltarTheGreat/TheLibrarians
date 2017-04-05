@@ -1,12 +1,8 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-
-
- // printing the form to enter the user input
- print <<<_HTML_
- <head>
-
-  <title>Login Page</title>
+<head>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,37 +25,29 @@
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="searchbook.php ">Search</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
+          <li><a href="searchbook.php">Search</a></li>
           <li><a href="payment/index.html ">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
-          <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
+          <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
           <li><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<div class="center ">
+  <div class="center ">
     <div class="row content ">
       <div class="col-sm-2 sidenav ">
       </div>
       <div class="col-sm-8 text-left ">
-
-
-<a href="http://localhost:8080/AutoLibrary/addbook.php">Add Book </a> <br> <br>         
-
-
-<a href="http://localhost:8080/AutoLibrary/addstudent.php">Add Student </a> <br> <br>    
-
-<a href="http://localhost:8080/AutoLibrary/addadmin.php">Add Administrator </a> <br> <br>  
-
-
-<a href="http://localhost:8080/AutoLibrary/removebook.php">Remove Book </a> <br> <br>   
-
-
-</div>
+        <h1>Welcome To The Library</h1>
+        <p>Hello students, faculty, and guests. We hope you enjoy our collection of novels and books. We are here to provide quality service to all our users and want you all to enjoy reading and picking out a book.</p>
+        <hr>
+        <h3>What do I do?</h3>
+        <p>Now that you are here with us, log in or search for a book and continue as a guest. Only students can checkout books. So if you dont have an account click on the register button.</p>
+      </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -71,12 +59,5 @@
   </footer>
 
 </body>
-     
-_HTML_;
- 
- 
-  
-  
 
-
-?>
+</html>
