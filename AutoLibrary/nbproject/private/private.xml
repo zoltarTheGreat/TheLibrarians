@@ -6,11 +6,14 @@
             <file>file:/C:/xampp/htdocs/AutoLibrary/adminlogin.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/addbook.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/menuadmin.php</file>
+            <file>file:/C:/xampp/htdocs/AutoLibrary/checkout.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/login.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/removebook.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/menustudent.php</file>
+            <file>file:/C:/xampp/htdocs/AutoLibrary/latefee.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/addstudent.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/searchbook.php</file>
+            <file>file:/C:/xampp/htdocs/AutoLibrary/returnbook.php</file>
             <file>file:/C:/xampp/htdocs/AutoLibrary/addadmin.php</file>
         </group>
     </open-files>

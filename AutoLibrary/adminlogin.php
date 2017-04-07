@@ -14,7 +14,7 @@ $inpdnomsg = '';
   
 <head>
 
-  <title>Login Page</title>
+  <title>ADmin Login Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -88,12 +88,10 @@ $inpdnomsg = '';
 </body>
 _HTML_;
  
-  require ('dbConfig.php');
+  require ('./dbConfig.php');
   $querystring = "SELECT * FROM `admin`  WHERE userid ='$inpuserid' and pass='$inppass'";
   $result = mysqli_query($con, $querystring);
-  if (!$result){
-    $count = mysqli_num_rows($result);
-  }
+  $count = mysqli_num_rows($result);
   
   
   if($count == 1) {

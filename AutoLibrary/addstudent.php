@@ -36,13 +36,13 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li class="active "><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="searchbook.php">Search</a></li>
-          <li><a href="payment/index.html ">Payments</a></li>
+          <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
-          <li><a href="addstudent.php">Register</a></li>
+          <li class="active"><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
@@ -96,6 +96,11 @@ $inpdnomsg = '';
 
 
 _HTML_;
+
+  if($inpstid == "" or $inpfirstn == "" or $inplastn == "" or $inpuserid == "" or $inppass == ""){
+
+  }else{
+
   require ('./dbConfig.php');
   $querystring = "INSERT INTO student (studentid, firstname,lastname,userid, pass ) VALUES ('$inpstid', '$inpfirstn', '$inplastn' ,'$inpuserid','$inppass')";
 
@@ -109,13 +114,13 @@ _HTML_;
     {
        
        print ( "Could not successfully run query ($querystring) from DB: " . mysqli_error($con) . "<br>");
-  }
+    }
  
    
  
   mysqli_close($con);
   
-  
+  }
 
 
 ?>

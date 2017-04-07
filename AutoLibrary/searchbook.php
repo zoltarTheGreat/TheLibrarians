@@ -40,7 +40,7 @@ if (!($deptname )) {
         <ul class="nav navbar-nav ">
           <li><a href="index.html">Home</a></li>
           <li class="active"><a href="searchbook.php ">Search</a></li>
-          <li><a href="payment/index.html ">Payments</a></li>
+          <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
@@ -112,11 +112,4 @@ else {
   mysqli_close($con);
 }
 ?>
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 

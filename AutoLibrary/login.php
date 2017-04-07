@@ -38,7 +38,7 @@ $inpdnomsg = '';
         <ul class="nav navbar-nav ">
           <li><a href="index.html">Home</a></li>
           <li><a href="searchbook.php ">Search</a></li>
-          <li><a href="payment/index.html ">Payments</a></li>
+          <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
@@ -56,7 +56,7 @@ $inpdnomsg = '';
       <div class="col-sm-8 text-left ">  
 
 
- <FORM method="POST" action="{$_SERVER['PHP_SELF']}">
+<FORM method="POST" action="{$_SERVER['PHP_SELF']}">
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
  <br> Login
  <br/>
@@ -73,7 +73,7 @@ $inpdnomsg = '';
          
 
  </FORM>
-  <a href="adminlogin.php"> Admin Mode </a> <br> <br>          
+  <h1><a href="adminlogin.php"> Admin Mode </a> <br> <br></h1>
 
 
 </div>
@@ -91,7 +91,7 @@ $inpdnomsg = '';
 
 _HTML_;
  
-  require ('dbConfig.php');
+  require ('./dbConfig.php');
   $querystring = "SELECT * FROM `student`  WHERE userid ='$inpuserid' and pass='$inppass'";
   $result = mysqli_query($con, $querystring);
   $count = mysqli_num_rows($result);
@@ -119,3 +119,4 @@ _HTML_;
 
 
 ?>
+
