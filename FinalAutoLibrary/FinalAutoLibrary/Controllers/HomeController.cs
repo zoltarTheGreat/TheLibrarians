@@ -13,14 +13,14 @@ namespace FinalAutoLibrary.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Payments()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Search()
         {
             ViewBag.Message = "Your contact page.";
 
