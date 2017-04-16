@@ -93,3 +93,4 @@ C:\Users\Camilo\Desktop\Actual Work\Software Engineering\TheLibrarians\FinalAuto
 C:\Users\Camilo\Desktop\Actual Work\Software Engineering\TheLibrarians\FinalAutoLibrary\FinalAutoLibrary\bin\Microsoft.AI.Web.xml
 C:\Users\Camilo\Desktop\Actual Work\Software Engineering\TheLibrarians\FinalAutoLibrary\FinalAutoLibrary\obj\Debug\FinalAutoLibrary.dll
 C:\Users\Camilo\Desktop\Actual Work\Software Engineering\TheLibrarians\FinalAutoLibrary\FinalAutoLibrary\obj\Debug\FinalAutoLibrary.pdb
+C:\Users\Camilo\Desktop\Actual Work\Software Engineering\TheLibrarians\FinalAutoLibrary\FinalAutoLibrary\obj\Debug\FinalAutoLibrary.csprojResolveAssemblyReference.cache

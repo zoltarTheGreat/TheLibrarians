@@ -42,12 +42,13 @@
 
 .center {
     background: url("books.jpg") no-repeat center center fixed;
+    color:black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-/* Set black background color, white text and some padding */
+/* Set picture background color, white text and some padding */
 
 footer {
     background-color: #8C001A;
