@@ -1,6 +1,5 @@
 ﻿.navbar-left {
     height: 100px;
-    padding: 0px;
 }
 
 .navbar-right {
@@ -43,9 +42,6 @@
 .center {
     background: url("books.jpg") no-repeat center center fixed;
     color:black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 /* Set picture background color, white text and some padding */

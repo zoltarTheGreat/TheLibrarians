@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace FinalAutoLibrary.Models
 {
@@ -29,5 +31,20 @@ namespace FinalAutoLibrary.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Books> Books { get; set; }
     }
+
+    public class Books
+    {
+        
+        [Key]public int ISBNId { get; set; }
+        public string Title { get; set; }
+        public string AuthorLast { get; set; }
+        public string AuthorFirst { get; set; }
+        public string Genre { get; set; }
+        public int Year { get; set; }
+
+    }
+
 }
