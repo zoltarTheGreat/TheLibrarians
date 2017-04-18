@@ -26,6 +26,12 @@ namespace FinalAutoLibrary.Migrations
 
                 manager.Create(user, "P@ssword1");
             }
+
+            if(!context.Books.Any(b => b.Title == "The Giving Tree"))
+            {
+                
+                var book = new Book { ISBNId = 9780060256654, Title = "The Giving Tree", AuthorFirst = "Shel", AuthorLast = "Silverstein", Genre = "Picture Book", Year = 1964 };
+            }
         }
     }
 }
