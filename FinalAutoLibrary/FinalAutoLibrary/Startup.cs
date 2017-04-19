@@ -9,6 +9,8 @@ namespace FinalAutoLibrary
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            //Add Role managaer
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
         }
     }
 }

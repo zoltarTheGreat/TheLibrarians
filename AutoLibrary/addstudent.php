@@ -13,7 +13,7 @@ $inpdnomsg = '';
  // printing the form to enter the user input
  print <<<_HTML_
 <head>
-  <title>Register Page</title>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,13 +36,13 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
           <li><a href="searchbook.php">Search</a></li>
           <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
-          <li class="active"><a href="addstudent.php">Register</a></li>
+          <li><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
@@ -54,24 +54,27 @@ $inpdnomsg = '';
       </div>
       <div class="col-sm-8 text-left ">
 
-<FORM method="POST" action="{$_SERVER['PHP_SELF']}">
+
+
+
+ <FORM method="POST" action="{$_SERVER['PHP_SELF']}">
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
- <br> Students. Please Register here. 
+ <br> Adding Student 
  <br/>
  <br>
- Student ID : <input type="number   " name="inpstid" size="30" value="$inpstid">
+ Student ID: <input type="number   " name="inpstid" size="30" value="$inpstid">
  <br/>
  <br>
  First Name : <input type="text" name="inpfirstn" size="30" value="$inpfirstn">
  <br/>
  <br>
- Last Name :  <input type="text" name="inplastn" size="30" value="$inplastn">
+ Last Name: <input type="text" name="inplastn" size="30" value="$inplastn">
  <br/>
  <br>
  User ID  # : <input type="text" name="inpuserid" size="30" value="$inpuserid">
  <br/>
  <br>
- Password :   <input type="text" name="inppass" size="30" value="$inppass">
+ Password # : <input type="text" name="inppass" size="30" value="$inppass">
  <br/>
  <br>    
          
@@ -80,7 +83,9 @@ $inpdnomsg = '';
 
  </FORM>
 
-  </div>
+ 
+
+ </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -88,19 +93,15 @@ $inpdnomsg = '';
   </div>
 
   <footer class="container-fluid text-center ">
-    <p>We are glad you are joining the Library</p>
+    <p>The Librarians welcome you to the Library</p>
   </footer>
 
 </body>
+
+</html>
+
  
-
-
 _HTML_;
-
-  if($inpstid == "" or $inpfirstn == "" or $inplastn == "" or $inpuserid == "" or $inppass == ""){
-
-  }else{
-
   require ('./dbConfig.php');
   $querystring = "INSERT INTO student (studentid, firstname,lastname,userid, pass ) VALUES ('$inpstid', '$inpfirstn', '$inplastn' ,'$inpuserid','$inppass')";
 
@@ -113,14 +114,14 @@ _HTML_;
    }else
     {
        
-       print ( "Could not successfully run query ($querystring) from DB: " . mysqli_error($con) . "<br>");
-    }
+       print ( "");
+  }
  
    
  
   mysqli_close($con);
   
-  }
+  
 
 
 ?>

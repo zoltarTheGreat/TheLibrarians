@@ -4,9 +4,9 @@
 
  // printing the form to enter the user input
  print <<<_HTML_
- <head>
 
-  <title>Login Page</title>
+<head>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,37 +29,69 @@
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="searchbook.php ">Search</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
+          <li><a href="searchbook.php">Search</a></li>
           <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
-          <li><a href="menuadmin.php">Welcome Back Librarian</a></li>
+          <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
           <li><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<div class="center ">
+  <div class="center ">
     <div class="row content ">
       <div class="col-sm-2 sidenav ">
       </div>
       <div class="col-sm-8 text-left ">
 
 
-<a href="addbook.php">Add Book </a> <br> <br>         
 
 
-<a href="addstudent.php">Add Student </a> <br> <br>    
-
-<a href="addadmin.php">Add Administrator </a> <br> <br>  
-
-
-<a href="removebook.php">Remove Book </a> <br> <br>   
+<a href=" addbook.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Add Book </button> <br> <br> 
+      
 
 
-</div>
+<a href=" addstudent.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Add Student </button> <br> <br> 
+  
+
+
+<a href=" addadmin.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Add Administrator </button> <br> <br> 
+
+
+<a href=" searchbook.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Search Book </button> <br> <br> 
+
+
+
+<a href=" removebook.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Remove Book </button> <br> <br> 
+
+
+<a href=" reservebook.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Reserve Book </button> <br> <br> 
+
+
+
+
+
+<a href=" checkout.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Check Out Book </button> <br> <br> 
+
+
+<a href=" returnbook.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Return Book </button> <br> <br> 
+
+<a href=" login.php" style="text-decoration:none">
+      <button  label="Remove Book" name="so_link" > Sign Out </button> <br> <br> 
+ 
+
+ </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -71,6 +103,8 @@
   </footer>
 
 </body>
+
+</html>
      
 _HTML_;
  

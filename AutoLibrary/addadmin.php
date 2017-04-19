@@ -14,7 +14,7 @@ $inpdnomsg = '';
  print <<<_HTML_
 
 <head>
-  <title>Register Page</title>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,13 +37,13 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
           <li><a href="searchbook.php">Search</a></li>
           <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
-          <li class="active"><a href="addstudent.php">Register</a></li>
+          <li><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
@@ -81,10 +81,9 @@ $inpdnomsg = '';
  <INPUT type="hidden" name="visited" value="true" >
 
  </FORM>
+ 
 
- </FORM>
-
-  </div>
+ </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -92,36 +91,35 @@ $inpdnomsg = '';
   </div>
 
   <footer class="container-fluid text-center ">
-    <p>We are glad you are joining the Library</p>
+    <p>The Librarians welcome you to the Library</p>
   </footer>
 
 </body>
+
+</html>
+
+
 _HTML_;
-
- if($inpadid == "" or $inpfirstn == "" or $inplastn == "" or $inpuserid == "" or $inppass == ""){
-
-  }else{
-
   require ('./dbConfig.php');
-  $querystring = "INSERT INTO student (studentid, firstname,lastname,userid, pass ) VALUES ('$inpadid', '$inpfirstn', '$inplastn' ,'$inpuserid','$inppass')";
+  $querystring = "INSERT INTO admin (adminid, firstname,lastname,userid, pass ) VALUES ('$inpadid', '$inpfirstn', '$inplastn' ,'$inpuserid','$inppass')";
 
-  
+   
 
   if (!mysqli_query($con, $querystring))
    {
-       print ("");
+       print ( "");
      
    }else
     {
        
        print ( "Could not successfully run query ($querystring) from DB: " . mysqli_error($con) . "<br>");
-    }
+  }
  
    
  
   mysqli_close($con);
   
-  }
+  
 
 
 ?>

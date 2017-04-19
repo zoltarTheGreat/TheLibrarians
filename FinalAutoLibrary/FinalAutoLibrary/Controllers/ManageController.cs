@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FinalAutoLibrary.Models;
+using EndToEnd;
 
 namespace FinalAutoLibrary.Controllers
 {
@@ -32,9 +33,9 @@ namespace FinalAutoLibrary.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -57,7 +58,10 @@ namespace FinalAutoLibrary.Controllers
             ViewBag.StatusMessage =
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
                 : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
                 : message == ManageMessageId.Error ? "An error has occurred."
+                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -68,6 +72,30 @@ namespace FinalAutoLibrary.Controllers
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
             return View(model);
+        }
+
+        //
+        // POST: /Manage/RemoveLogin
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RemoveLogin(string loginProvider, string providerKey)
+        {
+            ManageMessageId? message;
+            var result = await UserManager.RemoveLoginAsync(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                message = ManageMessageId.RemoveLoginSuccess;
+            }
+            else
+            {
+                message = ManageMessageId.Error;
+            }
+            return RedirectToAction("ManageLogins", new { Message = message });
         }
 
         //
@@ -133,6 +161,8 @@ namespace FinalAutoLibrary.Controllers
             return View(model);
         }
 
+        
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && _userManager != null)
@@ -144,7 +174,7 @@ namespace FinalAutoLibrary.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -174,14 +204,18 @@ namespace FinalAutoLibrary.Controllers
             return false;
         }
 
+
         public enum ManageMessageId
         {
+            AddPhoneSuccess,
             ChangePasswordSuccess,
+            SetTwoFactorSuccess,
             SetPasswordSuccess,
             RemoveLoginSuccess,
+            RemovePhoneSuccess,
             Error
         }
 
-#endregion
+        #endregion
     }
 }

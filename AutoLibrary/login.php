@@ -36,9 +36,8 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
+         
           <li><a href="searchbook.php ">Search</a></li>
-          <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
           <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>

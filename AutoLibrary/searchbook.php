@@ -12,10 +12,9 @@ if (!($deptname )) {
 
  // printing the form to enter the user input
  print <<<_HTML_
-
+  
  <head>
-
-  <title>Search Page</title>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -38,8 +37,8 @@ if (!($deptname )) {
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="searchbook.php ">Search</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
+          <li><a href="searchbook.php">Search</a></li>
           <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
@@ -50,27 +49,25 @@ if (!($deptname )) {
     </div>
   </nav>
 
-
   <div class="center ">
     <div class="row content ">
       <div class="col-sm-2 sidenav ">
       </div>
-      <div class="col-sm-8 text-center "> 
-<br>
-<br>
-<br>
-<h1>Search For A Book Here</h1>  
+      <div class="col-sm-8 text-left ">
+
+
  <FORM method="POST" action="{$_SERVER['PHP_SELF']}">
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
  <font color= 'red'>$deptnamemsg</font><br>
-  Book Title: <input type="text" name="deptname" size="30" value="$deptname">
+  Book Title: <input type="text" name="deptname" size="9" value="$deptname">
  <br/>
  <br>
  <INPUT type="submit" value=" Submit ">
  <INPUT type="hidden" name="visited" value="true">
  </FORM>
+ 
 
-</div>
+ </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -82,6 +79,8 @@ if (!($deptname )) {
   </footer>
 
 </body>
+
+</html>
 _HTML_;
  
 }
@@ -112,4 +111,11 @@ else {
   mysqli_close($con);
 }
 ?>
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 

@@ -11,10 +11,8 @@ $inpdnomsg = '';
  // printing the form to enter the user input
  print <<<_HTML_
 
-  
 <head>
-
-  <title>ADmin Login Page</title>
+  <title>Welcome Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,24 +35,23 @@ $inpdnomsg = '';
       </div>
       <div class="collapse navbar-collapse " id="myNavbar ">
         <ul class="nav navbar-nav ">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="searchbook.php ">Search</a></li>
-          <li><a href="payment/index.html ">Payments</a></li>
+          <li class="active "><a href="index.html">Home</a></li>
+          <li><a href="searchbook.php">Search</a></li>
+          <li><a href="applylatefee.php">Payments</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
-          <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
+          <li><a href="login.php"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
           <li><a href="addstudent.php">Register</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
   <div class="center ">
     <div class="row content ">
       <div class="col-sm-2 sidenav ">
       </div>
-      <div class="col-sm-8 text-left ">  
+      <div class="col-sm-8 text-left ">
 
 
  <FORM method="POST" action="{$_SERVER['PHP_SELF']}">
@@ -73,8 +70,9 @@ $inpdnomsg = '';
  <INPUT type="hidden" name="visited" value="true" >
 
  </FORM>
-         
-     </div>
+ 
+
+ </div>
       <div class="col-sm-2 sidenav ">
       </div>
     </div>
@@ -82,10 +80,14 @@ $inpdnomsg = '';
   </div>
 
   <footer class="container-fluid text-center ">
-    <p>Welcome Fellow Librarian</p>
+    <p>The Librarians welcome you to the Library</p>
   </footer>
 
 </body>
+
+</html>
+         
+     
 _HTML_;
  
   require ('./dbConfig.php');

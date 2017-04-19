@@ -10,11 +10,6 @@ namespace FinalAutoLibrary.Models
         public string Email { get; set; }
     }
 
-    public class ExternalLoginListViewModel
-    {
-        public string ReturnUrl { get; set; }
-    }
-
     public class ForgotViewModel
     {
         [Required]
@@ -40,11 +35,6 @@ namespace FinalAutoLibrary.Models
 
     public class RegisterViewModel
     {
-        //For admin roles
-        [Required]
-        [Display(Name = "UserRoles")]
-        public string UserRoles { get; set; }
-
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -83,5 +73,11 @@ namespace FinalAutoLibrary.Models
         public string Code { get; set; }
     }
 
-   
+    public class ForgotPasswordViewModel
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+    }
 }
