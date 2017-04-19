@@ -264,6 +264,9 @@
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Books\_AdminOnly1.cshtml" />
+    <Content Include="Views\Books\_AdminOnly2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

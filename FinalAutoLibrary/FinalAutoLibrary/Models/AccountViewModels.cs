@@ -40,6 +40,11 @@ namespace FinalAutoLibrary.Models
 
     public class RegisterViewModel
     {
+        //For admin roles
+        [Required]
+        [Display(Name = "UserRoles")]
+        public string UserRoles { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

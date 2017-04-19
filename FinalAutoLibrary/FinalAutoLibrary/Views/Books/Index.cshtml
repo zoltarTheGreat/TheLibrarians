@@ -8,6 +8,13 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+
+        @using (Html.BeginForm())
+        {
+            <p> Title: @Html.TextBox("SearchString") <br/>
+            <input type="submit" value="Filter"/></p>
+        }
+
 </p>
 <table class="table">
     <tr>
@@ -29,13 +36,9 @@
         <th>
             @Html.DisplayNameFor(model => model.CheckedOut)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReturnDate)
-        </th>
-        <th></th>
+        
+        @Html.Partial("_AdminOnly1")
+    
     </tr>
 
 @foreach (var item in Model) {
@@ -64,11 +67,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.ReturnDate)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ISBNId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ISBNId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ISBNId })
-        </td>
+     
+        @Html.Partial("_AdminOnly2", new ViewDataDictionary { { "yes", item.ISBNId } });
+
     </tr>
 }
 

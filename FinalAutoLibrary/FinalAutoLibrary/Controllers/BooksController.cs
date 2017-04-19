@@ -14,10 +14,24 @@ namespace FinalAutoLibrary.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Books
+      /*  // GET: Books
         public ActionResult Index()
         {
             return View(db.Books.ToList());
+        } */
+
+        // GET: Books Search
+        public ActionResult Index(string id)
+        {
+            string searchString = id;
+            var books = from b in db.Books select b;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.Title.Contains(searchString));
+            }
+
+            return View(books);
         }
 
         // GET: Books/Details/5

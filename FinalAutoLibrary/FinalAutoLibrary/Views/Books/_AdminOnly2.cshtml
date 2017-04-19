@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FinalAutoLibrary.Models.Book>
+
+
+@if (Request.IsAuthenticated)
+{
+    
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = ViewData["yes"] })|
+        @Html.ActionLink("Edit", "Edit", new { id = ViewData["yes"] }) |
+        @Html.ActionLink("Delete", "Delete", new { id = ViewData["yes"] })
+    </td>
+
+}
+else
+{
+   
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = ViewData["yes"] })|
+    </td>
+}

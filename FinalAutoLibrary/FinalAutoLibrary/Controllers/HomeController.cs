@@ -26,5 +26,13 @@ namespace FinalAutoLibrary.Controllers
 
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Admin()
+        {
+            string apiUrl = Url.HttpRouteUrl("DefaultApi", new { controller = "admin" });
+            ViewBag.ApiUrl = new Uri(Request.Url, apiUrl).AbsoluteUri.ToString();
+            return View();
+        }
     }
 }

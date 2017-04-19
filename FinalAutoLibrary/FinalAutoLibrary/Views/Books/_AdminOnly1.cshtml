@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<FinalAutoLibrary.Models.Book>
+
+@if (Request.IsAuthenticated)
+{
+   
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </th>
+
+}
+else
+{
+    
+}
